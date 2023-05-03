@@ -1,21 +1,29 @@
-const without = function(array1, array2) {
-  let leftOver = [];
+  // declare function that takes two array values
+  const without = function(array1, array2){
+  // create an empty array
+    let leftOver = [];
 
-  for (let x = 0; x < array1.length; x++) {
+  //create a c loop for each element in the first array
+  for(let x = 0; x < array1.length; x++){
+    // declare a variable for finding an element, set it to false as it will only ping true if its found in the second array
     let found = false;
-    for (let i = 0; i < array2.length; i++) {
-      if (array1[x] === array2[i]) {
+    // for each element in the first array, compare it to to the same position in array 2
+    for(let i = 0; i < array2.length; i++){
+      if(array1[x] === array2[i]){
+        // if found, break the loop
         found = true;
         break;
       }
+
     }
-    if (!found) {
+    // if not found, push the array element onto a new array
+    if(!found){
       leftOver.push(array1[x]);
     }
   }
-
   return leftOver;
-};
+
+  }
 
 //test if arrays are equal
 const eqArrays = function(array1, array2){

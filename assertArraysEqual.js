@@ -29,6 +29,14 @@ const assertArraysEqual = function(array1, array2){
 
 }
 
+const middle = function(array){
+  //take an array and print it
+  console.log(array);
+}
 
-assertArraysEqual([1, 2, 3], [1, 2, 3]); // => true
-assertArraysEqual([1, 2, 3], [3, 2, 1]); // => false
+let middleValue = [1,2,3,4,5];
+
+middle(middleValue);
+
+//assertArraysEqual([1, 2, 3], [1, 2, 3]); // => true
+//assertArraysEqual([1, 2, 3], [3, 2, 1]); // => false
