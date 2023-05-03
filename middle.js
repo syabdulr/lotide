@@ -29,13 +29,29 @@ const assertArraysEqual = function(array1, array2){
 
 }
 
-const middle = function(array){
-  //take an array and print it
-  console.log(array);
-}
+const middle = function(array) {
+  let returnedArray = [];
+  const middleIndex = Math.floor(array.length / 2);
+  if (array.length <= 2) {
+    return returnedArray;
+  } else if (array.length % 2 === 0) {
+    returnedArray.push(array[middleIndex - 1], array[middleIndex]);
+  } else {
+    returnedArray.push(array[middleIndex]);
+  }
+  return returnedArray;
+};
 
-let middleValue = [1,2,3,4,5];
+
+let middleValue = [9,10,11,12,13,14,15,16];
+
+middle(middleValue);
 
 
-//assertArraysEqual([1, 2, 3], [1, 2, 3]); // => true
-//assertArraysEqual([1, 2, 3], [3, 2, 1]); // => false
+middleValue = [6,7,8,9,10,11,12];
+
+middle(middleValue);
+
+middleValue = [1,2];
+
+middle(middleValue);
