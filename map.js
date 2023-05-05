@@ -31,3 +31,4 @@ const words = ["ground", "control", "to", "major", "tom"];
 
 const results1 = map(words, word => word[0]);
 assertArraysEqual(results1, ['g', 'c', 't', 'm', 't']); // Output: Assertion Passed: [ 'g', 'c', 't', 'm', 't' ]  === [ 'g', 'c', 't', 'm', 't' ]
+
