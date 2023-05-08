@@ -1,35 +1,19 @@
-const assertEqual = function(actual, expected) {
+const eqArrays = function(array1, array2){ // function takes two arrays
 
-  if (actual === expected) {
-    console.log(`🟢🟢🟢 Assertion Passed: ${actual}  === ${expected}`);
-  } else {
-    console.log(`🔴🔴🔴 Assertion Failed: ${actual}  !=  ${expected}`);
+  if(array1.length !== array2.length){ //if the length of array1 is not truly equal to array2
+    return false; // return false
   }
 
-};
-
-const eqArrays = function(array1, array2){
-
-  if(array1.length !== array2.length){
-    return false;
-  }
-
-  for(let x = 0; x <= array1.length; x++){
+  for(let x = 0; x <= array1.length; x++){ //check if each element in array 1 is equal to the corresponding element in array2
     if (array1[x] !== array2[x]){
-      return false;
+      return false; //if they are not equal, return false
     } 
     
   }
 
-  return true;
+  return true; //return true if they are equal
 
 
 }
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => true
-assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false); // => false
-
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true); // => true
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false); // => false
-
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); 
+module.exports = eqArrays;
