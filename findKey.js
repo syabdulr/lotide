@@ -10,7 +10,7 @@ const assertEqual = function(actual, expected) {
 
 //create function that takes object and callback
 
-const findKey = function(object, callBack){ // passai
+const findKey = function(object, callBack){ 
 
 
   for(let key in object){ //for of cannot be used to look through objects
