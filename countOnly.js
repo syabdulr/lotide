@@ -1,12 +1,5 @@
-const assertEqual = function(actual, expected) {
+const assertEqual = require('./assertEqual.js');
 
-  if (actual === expected) {
-    console.log(`🟢🟢🟢 Assertion Passed: ${actual}  === ${expected}`);
-  } else {
-    console.log(`🔴🔴🔴 Assertion Failed: ${actual}  !=  ${expected}`);
-  }
-
-};
 
 const countOnly = function(allItems, itemsToCount){
   //the function should report back how many instances of each string were found in the allItems array of strings
