@@ -35,3 +35,5 @@ const countLetters = function(string){
 }
 
 countLetters("This is a sentence.");
+
+module.exports = countLetters;

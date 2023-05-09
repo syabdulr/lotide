@@ -87,3 +87,5 @@ const obj3 = { a: 1, b: 3 };
 // Test the assertObjectsEqual function with the objects above as arguments
 assertObjectsEqual(obj1, obj2); // should pass
 assertObjectsEqual(obj1, obj3); // should fail
+
+module.exports = assertObjectsEqual;

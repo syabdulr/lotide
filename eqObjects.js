@@ -81,3 +81,5 @@ assertEqual(eqObjects(shirtObject, anotherShirtObject), true); // should pass
 
 // call the eqObjects function with the first and third objects and pass the result to the assertEqual function
 assertEqual(eqObjects(shirtObject, longSleeveShirtObject), false); // should pass
+
+module.exports = eqObjects;
